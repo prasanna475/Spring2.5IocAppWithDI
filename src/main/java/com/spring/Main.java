@@ -13,6 +13,7 @@ public class Main {
 		 * ClassPathXmlApplicationContext("Spring-Module.xml"); Hello
 		 * h=(Hello)context.getBean("hello"); h.printHello();
 		 */
+		
 		BeanFactory factory = new XmlBeanFactory(new ClassPathResource("Spring-Module.xml"));
 		LaptopService laptopService = (LaptopService) factory.getBean("laptopService");
 		Laptop laptop = getLaptop();
